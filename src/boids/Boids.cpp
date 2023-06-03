@@ -35,7 +35,7 @@ void Boids::generateFish(int nbFish, int fam)
     }
 }
 
-void Boids::runBoids(Params p, p6::Context& context, std::function<void(ObstacleHandler)> const& for_each_obstacle, std::vector<Food>& food)
+void Boids::runBoids(Params p, std::function<void(ObstacleHandler)> const& for_each_obstacle, std::vector<Food>& food)
 {
     for (auto& boid : _fishpack)
     {

@@ -86,10 +86,10 @@ void App::for_each_obstacle(ObstacleHandler const& handler)
 void App::run(p6::Context& ctx)
 {
     _boids1.runBoids(
-        _parametres, ctx, [&](ObstacleHandler handler) { for_each_obstacle(handler); }, _food
+        _parametres, [&](ObstacleHandler handler) { for_each_obstacle(handler); }, _food
     );
     _boids2.runBoids(
-        _parametres, ctx, [&](ObstacleHandler handler) { for_each_obstacle(handler); }, _food
+        _parametres, [&](ObstacleHandler handler) { for_each_obstacle(handler); }, _food
     );
     _obstacles1.runObstacles(ctx);
     _obstacles2.runObstacles(ctx);
